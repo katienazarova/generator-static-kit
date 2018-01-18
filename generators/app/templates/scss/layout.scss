@@ -1,0 +1,17 @@
+@import "./common";
+
+.container {
+    @include container();
+}
+
+.row {
+    @include row();
+}
+
+.column {
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+
+    @include text();
+}

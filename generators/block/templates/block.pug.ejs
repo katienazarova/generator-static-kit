@@ -1,0 +1,7 @@
+mixin <%= name %>(content, modes)
+    - var className = '<%= name %>';
+    - var modes = modes || {};
+    each value, key in modes
+        - className = className + ' <%= name %>_' + key + '_' + value;
+
+    <%= tag %>(class=className) #{content}

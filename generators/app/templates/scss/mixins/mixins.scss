@@ -1,0 +1,53 @@
+@mixin container() {
+    width: 100%;
+
+    @media #{$media-desktop} {
+        width: 980px;
+        margin: 0 auto;
+    }
+
+    @media #{$media-desktop-large} {
+        width: 1280px;
+    }
+}
+
+@mixin row() {
+    font-size: 0;
+    line-height: 0;
+    text-align: justify;
+
+    &:after {
+        content: '';
+        display: inline-block;
+        font: 0px/0 a !important;
+        height: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        vertical-align: top;
+        visibility: hidden;
+        width: 100% !important;
+    }
+}
+
+@mixin clear() {
+    &:after {
+        content: '';
+        display: block;
+        font: 0px/0 a !important;
+        height: 0 !important;
+        width: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        visibility: hidden;
+        clear: both;
+    }
+}
+
+@mixin text() {
+    font-size: 18px;
+    line-height: 30px;
+}
+
+@mixin transition($property) {
+    transition: $property ease-out 0.5s;
+}
